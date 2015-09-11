@@ -58,9 +58,5 @@ void loop()
   //regs[0] = analogRead(0); // update data to be written to arduino slave
   regs[0] = randNumber;
   
-
-  
-  
-  
   //analogWrite(LED, regs[0]>>2); // constrain adc value from the arduino slave to 255
 }
