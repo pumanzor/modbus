@@ -54,12 +54,13 @@ void setup() {
 
 void loop() {
  delay(2000);
-  float h = sht1x.readHumidity();
-  float t = sht1x.readTemperatureC();
+  float h = sht1x.readHumidity() * 100;
+  float t = sht1x.readTemperatureC() * 100;
 
  sensors.requestTemperatures();
  
- tempC2 = sensors.getTempCByIndex(0),4;
+ tempC2 = sensors.getTempCByIndex(0),4 * 100;
+ 
  //tempC2 = sensors.getTempC(probe01);
  
  if (isnan(t) || isnan(h)) {
