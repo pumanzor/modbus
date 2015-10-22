@@ -59,7 +59,8 @@ void loop() {
 
  sensors.requestTemperatures();
  
- tempC2 = sensors.getTempCByIndex(0),4 * 100;
+ tempC2 = sensors.getTempCByIndex(0),4;
+ tempC3 = tempC2 * 100;
  
  //tempC2 = sensors.getTempC(probe01);
  
@@ -89,7 +90,7 @@ void loop() {
    if (millis() > (time + 15000)) {
        time = millis();
   
- String pubString = "" + String(t) + "," + String(tempC2) + "," + String(h) + "," + id_sensor + "";
+ String pubString = "" + String(t) + "," + String(tempC3) + "," + String(h) + "," + id_sensor + "";
    pubString.toCharArray(message_buff, pubString.length()+1);
    mqtt.publish("rr/temp",message_buff );
 
