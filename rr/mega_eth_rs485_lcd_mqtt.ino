@@ -141,7 +141,7 @@ regs[2] = val3;
 regs[3] = val4;
 
 
-  lcd.setCursor(0,0);
+/*  lcd.setCursor(0,0);
  lcd.print("SA:");
  lcd.setCursor(3,0);
 float val11 = val1 / 100.0;
@@ -161,7 +161,7 @@ lcd.print("\337");
   lcd.print(val33, 1);
   lcd.setCursor(19,0);
   lcd.print("%");
-  
+  */
 
 }
  else if (val4 == 2)
