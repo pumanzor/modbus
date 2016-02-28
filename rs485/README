@@ -79,6 +79,15 @@ first in Arduino Master upload this file
 
 - RS485_UnoR3_Master.ino
 
+******************************************************************************************
+******************************************************************************************
+Before to UPLOAD YOU MUST DISCONNECT THE RX and TX PIN up to the sketch will be uploaded, 
+same thing whe you uploadto slave the sketch.
+
+otherwise you will receive a error while uploading sketch  from IDE
+******************************************************************************************
+******************************************************************************************
+
 and then send this file to arduino Slave
 
 - RS485_UnoR3_Slave.ino
