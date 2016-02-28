@@ -84,7 +84,8 @@ first in Arduino Master upload this file
 Before to UPLOAD YOU MUST DISCONNECT THE RX and TX PIN up to the sketch will be uploaded, 
 same thing whe you uploadto slave the sketch.
 
-otherwise you will receive a error while uploading sketch  from IDE
+otherwise you will receive a error while uploading sketch  from IDE because you are 
+sharing the same Arduino R3 serial port to upload and stablish rs485link
 ******************************************************************************************
 ******************************************************************************************
 
