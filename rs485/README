@@ -25,7 +25,8 @@ if you wnat to connect a LCD RGB the slave, you need add this libraries
 Materials
 
 2 x Arduino UNO R3 o Arduino Mega
-2 x RS485 module (in this case waveshare modules
+2 x RS485 module, in this case waveshare modules but if you do not have this brand. 
+you can use a generic please read the end of this file to see how achieve this.
 1 x Potentiometer 20K
 1 x Led
 1 x Resistor 220 Ohm
