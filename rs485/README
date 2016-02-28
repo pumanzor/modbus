@@ -30,3 +30,40 @@ Materials
 1 x Led
 1 x Resistor 220 Ohm
 1 x LCD RGB Seeedstudio (Optional)
+
+
+Connections
+
+Master
+Module RS485 to Arduino Master
+
+Pin DO to pin RX Arduino
+Pin DI to pin TX Arduino
+Pin RSE to pin 2 Arduino
+Pin VCC to pin 5v Arduino
+Pin GND to ping GND Arduino
+
+Potentiometer
+Pin left to Pin 3.3V Arduino
+Pin center to Pin A0 Arduino
+Ping right to Pin GND Arduino
+
+Slave
+Module RS485 to Arduino Slave
+
+Pin DO to pin RX Arduino
+Pin DI to pin TX Arduino
+Pin RSE to pin 2 Arduino
+Pin VCC to pin 5v Arduino
+Pin GND to ping GND Arduino
+
+Led please connecta a 220 Ohm resistor to anode led
+Led anode/resistor to pin 3.3v Arduino
+led catode to pin GND Arduino
+
+optional LCD RGB
+
+Pin SCL to Pin 5 Arduino
+Pin SDA to Pin 4 Arduino
+Pin Vcc to Pin 5V Arduino
+Pin GND to Pin Gnd Arduino
