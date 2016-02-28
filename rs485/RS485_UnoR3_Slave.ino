@@ -8,10 +8,6 @@ const int colorR = 255;
 const int colorG = 0;
 const int colorB = 0;
 
-int sensorValue = 0;  
-int outputValue = 0; 
-
-
 #define  LED 8  
 
 //////////////// registers of your slave ///////////////////
@@ -41,7 +37,7 @@ void loop()
 {
 
   modbus_update();
-  holdingRegs[ADC_VAL] = analogRead(A0);
+//  holdingRegs[ADC_VAL] = analogRead(A0);
   
  digitalWrite(LED, HIGH);
  delay(holdingRegs[PWM_VAL]);
