@@ -119,6 +119,13 @@ same connections for another pins
 
 =======================================================================
 
+if you don't have a LCD RGB seeedstudio please use 
+
+RS485_UnoR3_Slave_only_LED.ino sketch instead RS485_UnoR3_Slave.ino
+
+=================================================================================
+=================================================================================
+
 All this components you can obtain from our store
 
 http://store.redlibre.cl
@@ -126,3 +133,6 @@ http://store.redlibre.cl
 Questions and other things related to this project
 
 info@redlibre.cl
+
+=================================================================================
+=================================================================================
