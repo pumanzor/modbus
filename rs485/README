@@ -87,3 +87,19 @@ Now connect RS485 modules each other
 
 Rs485 Master Module Pin A to Pin A RS485 Slave module
 Rs485 Master Module Pin B to Pin B RS485 Slave module
+
+
+=========================================================================
+
+If you don't have a waveshare Rs485 module you can use a generic module, in this case you can see a diferent pin's 
+on this module.
+
+you can do this:
+
+RS485 generic module pin out
+
+RO  =  DO waveshare Pin
+RI  =  DI waveshare Pin
+DE and RE  = RSE waveshare Pin , in this case you must make a bridge between DE and RE , this bridge will become on RSE pin
+
+same connections for another pins
