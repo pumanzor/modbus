@@ -21,7 +21,7 @@ if you wnat to connect a LCD RGB the slave, you need add this libraries
 -  	rgb_lcd.cpp
 -       rgb_lcd.h
 
-
+========================================================================================
 Materials
 
 2 x Arduino UNO R3 o Arduino Mega
@@ -31,6 +31,7 @@ Materials
 1 x Resistor 220 Ohm
 1 x LCD RGB Seeedstudio (Optional)
 
+========================================================================================
 
 Connections
 
@@ -47,6 +48,8 @@ Potentiometer
 Pin left to Pin 3.3V Arduino
 Pin center to Pin A0 Arduino
 Ping right to Pin GND Arduino
+
+===============================================================================================
 
 Slave
 Module RS485 to Arduino Slave
