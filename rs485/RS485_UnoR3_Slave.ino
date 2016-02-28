@@ -42,24 +42,22 @@ void loop()
 
   modbus_update();
   holdingRegs[ADC_VAL] = analogRead(A0);
-  sensorValue = holdingRegs[PWM_VAL];
-
-  outputValue = map(sensorValue, 0, 1023, 0, 255);
-
- if ( holdingRegs[PWM_VAL] > 600)
- {digitalWrite(LED, HIGH);
- delay(250);
+  
+ digitalWrite(LED, HIGH);
+ delay(holdingRegs[PWM_VAL]);
  digitalWrite(LED, LOW);
- delay(250);
- }
+ delay(holdingRegs[PWM_VAL]);
  
- else {digitalWrite(LED, HIGH);}
+ 
+ lcd.setCursor(0, 1);
+ lcd.print(holdingRegs[PWM_VAL]);
+ lcd.print("  "); 
+ lcd.setCursor(5, 1);
+ lcd.print(holdingRegs[PWM_VAL]>>2); 
+ lcd.print("  ");  
+ lcd.setCursor(10, 1);
+ lcd.print(holdingRegs[PWM_VAL]>>4);
+ lcd.print("  "); 
 
-lcd.setCursor(0, 1);
-lcd.print(outputValue);  
-lcd.setCursor(5, 1);
-lcd.print(holdingRegs[PWM_VAL]>>4);  
-lcd.setCursor(10, 1);
-lcd.print(holdingRegs[PWM_VAL]);  
 
 }
