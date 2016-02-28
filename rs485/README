@@ -1,0 +1,32 @@
+Hello, this folder contains libraries and sketch to handle a Rs485 Modbus link to send data from master to slave
+in this case the master take readings from potentiometer (values between 0 and 255) and send it this values to slave
+
+the slave take this values and make a flashing with a delay between flashes according a values from master.
+
+also you can see the  values that it send  from master with a LCD RGB display
+
+Mode employ
+
+first you need install the libraries:
+
+-       SimpleModbusMaster.h
+-       SimpleModbusMaster.cpp
+-  	SimpleModbusSlave.h
+-  	SimpleModbusSlave.cpp
+
+
+
+if you wnat to connect a LCD RGB the slave, you need add this libraries
+
+-  	rgb_lcd.cpp
+-       rgb_lcd.h
+
+
+Materials
+
+2 x Arduino UNO R3 o Arduino Mega
+2 x RS485 module (in this case waveshare modules
+1 x Potentiometer 20K
+1 x Led
+1 x Resistor 220 Ohm
+1 x LCD RGB Seeedstudio (Optional)
