@@ -60,7 +60,8 @@ Pin RSE to pin 2 Arduino
 Pin VCC to pin 5v Arduino
 Pin GND to ping GND Arduino
 
-Led please connecta a 220 Ohm resistor to anode led
+Led, please connect a 220 Ohm resistor to anode pin led
+
 Led anode/resistor to pin 3.3v Arduino
 led catode to pin GND Arduino
 
@@ -71,7 +72,7 @@ Pin SDA to Pin 4 Arduino
 Pin Vcc to Pin 5V Arduino
 Pin GND to Pin Gnd Arduino
 
-
+=============================================================================
 Install Sketches
 
 first in Arduino Master upload this file
@@ -103,3 +104,9 @@ RI  =  DI waveshare Pin
 DE and RE  = RSE waveshare Pin , in this case you must make a bridge between DE and RE , this bridge will become on RSE pin
 
 same connections for another pins
+
+=======================================================================
+
+Questions and other things related to this project
+
+info@redlibre.cl
