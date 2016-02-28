@@ -37,6 +37,6 @@ void setup()
 void loop()
 {
   modbus_update();
-  regs[0] = analogRead(0);
-  analogWrite(LED, regs[0]>>2); 
+  regs[0] = analogRead(0)/4;
+  //analogWrite(LED, regs[0]>>2); 
 }
