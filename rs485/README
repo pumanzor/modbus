@@ -70,3 +70,20 @@ Pin SCL to Pin 5 Arduino
 Pin SDA to Pin 4 Arduino
 Pin Vcc to Pin 5V Arduino
 Pin GND to Pin Gnd Arduino
+
+
+Install Sketches
+
+first in Arduino Master upload this file
+
+- RS485_UnoR3_Master.ino
+
+and then send this file to arduino Slave
+
+- RS485_UnoR3_Slave.ino
+
+
+Now connect RS485 modules each other
+
+Rs485 Master Module Pin A to Pin A RS485 Slave module
+Rs485 Master Module Pin B to Pin B RS485 Slave module
