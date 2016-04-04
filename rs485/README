@@ -31,7 +31,6 @@ you can use a generic please read the end of this file to see how achieve this.
 1 x Led
 1 x Resistor 220 Ohm
 1 x LCD RGB Seeedstudio (Optional) 
-http://store.redlibre.cl/index.php?id_product=31&controller=product
 
 ========================================================================================
 
@@ -126,13 +125,4 @@ RS485_UnoR3_Slave_only_LED.ino sketch instead RS485_UnoR3_Slave.ino
 =================================================================================
 =================================================================================
 
-All this components you can obtain from our store
 
-http://store.redlibre.cl
-
-Questions and other things related to this project
-
-info@redlibre.cl
-
-=================================================================================
-=================================================================================
