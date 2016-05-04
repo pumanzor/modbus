@@ -5,6 +5,8 @@ the slave take this values and make a flashing with a delay between flashes acco
 
 also you can see the  values that it send  from master with a LCD RGB display
 
+**** compiled with IDE 1.6.5 *****
+
 Mode employ
 
 first you need install the libraries:
