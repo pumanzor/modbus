@@ -54,7 +54,7 @@ def on_message(client, userdata, msg):
 def publish_mqtt(payload):                                
     topic = '/plc1'                                       
     try:                                                  
-        publish.single(topic, payload, hostname='190.97.168.236', port=1883, retain=False, qos=0)
+        publish.single(topic, payload, hostname='broker_ip_address', port=1883, retain=False, qos=0)
     except Exception as err:                                                                     
             print "Couldn't publish :" + str(err)                                                
             pass                                                                                 
