@@ -13,8 +13,8 @@ const int colorB = 0;
 //////////////// registers of your slave ///////////////////
 enum 
 {
-  ADC_VAL,     
-  PWM_VAL,        
+  reg0_VAL,     
+  reg1_VAL,        
   HOLDING_REGS_SIZE
 };
 
@@ -40,19 +40,19 @@ void loop()
 //  holdingRegs[ADC_VAL] = analogRead(A0);
   
  digitalWrite(LED, HIGH);
- delay(holdingRegs[PWM_VAL]);
+ delay(holdingRegs[reg0_VAL]);
  digitalWrite(LED, LOW);
- delay(holdingRegs[PWM_VAL]);
+ delay(holdingRegs[reg0_VAL]);
  
  
  lcd.setCursor(0, 1);
- lcd.print(holdingRegs[PWM_VAL]);
+ lcd.print(holdingRegs[reg0_VAL]);
  lcd.print("  "); 
  lcd.setCursor(5, 1);
- lcd.print(holdingRegs[PWM_VAL]>>2); 
+ lcd.print(holdingRegs[reg0_VAL]>>2); 
  lcd.print("  ");  
  lcd.setCursor(10, 1);
- lcd.print(holdingRegs[PWM_VAL]>>4);
+ lcd.print(holdingRegs[reg0_VAL]>>4);
  lcd.print("  "); 
 
 
