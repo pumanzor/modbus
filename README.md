@@ -9,9 +9,9 @@
 
 ###Modbus sobre lineas seriales
 
-Modbus sobre lineas seriales opera en el nivel 2 del modelo OSI. Un sistema del tipo maestro-esclavo posee 1 nodo (Maestro) que envia comandos a uno de los nodos "Esclavos", a su vez estos nodos esclavos no transmitiran datos sin que antes haya un request desde el nodo Maestro y tampoco pueden comunicarse con los otros nodos esclavos de la red.
+Modbus sobre lineas seriales opera en el nivel 2 del modelo OSI, un sistema del tipo maestro-esclavo posee 1 nodo Maestro el cual envia comandos a uno de los nodos "Esclavos", a su vez estos nodos esclavos no transmitiran datos sin que antes haya un request desde el nodo Maestro y tampoco pueden comunicarse con los otros nodos esclavos de la red.
 
-A nivel fisico, Modubs sobre lineas seriales puede usar diferentes interfaces tales como TIA/EIA RS485, RS232, RS422, interfaces de 2 lineas son las mas utilizadas para este protocolo.
+A nivel fisico, Modbus sobre lineas seriales y puede usar diferentes interfaces tales como TIA/EIA RS485, RS232, RS422, interfaces de 2 lineas son las mas utilizadas para este protocolo.
 
 
 
