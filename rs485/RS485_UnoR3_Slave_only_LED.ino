@@ -5,8 +5,8 @@
 //////////////// registers of your slave ///////////////////
 enum 
 {
-  ADC_VAL,     
-  PWM_VAL,        
+  reg0_VAL,     
+  reg1_VAL,        
   HOLDING_REGS_SIZE
 };
 
@@ -28,8 +28,8 @@ void loop()
  // holdingRegs[ADC_VAL] = analogRead(A0);
   
  digitalWrite(LED, HIGH);
- delay(holdingRegs[PWM_VAL]);
+ delay(holdingRegs[reg0_VAL]);
  digitalWrite(LED, LOW);
- delay(holdingRegs[PWM_VAL]);
+ delay(holdingRegs[reg0_VAL]);
  
 }
