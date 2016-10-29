@@ -26,8 +26,11 @@ void setup()
     lcd.begin(16, 2);
     lcd.setRGB(colorR, colorG, colorB);
     lcd.print("Receiving from Master...");
-  
+  //This line apply to get function & register from master
+  //modbus_configure(&Serial, baud, SERIAL_8N2: 8bits, non-parity-2 bit stop, scan rate, pin2, HOLDING_REGS_SIZE, holdingRegs);
   modbus_configure(&Serial, 9600, SERIAL_8N2, 1, 2, HOLDING_REGS_SIZE, holdingRegs);
+  
+  //this line apply to send response to Master modbus_update_comms(9600, SERIAL_8N2, ID_slave: 1);
   modbus_update_comms(9600, SERIAL_8N2, 1);
   
   pinMode(LED, OUTPUT);
