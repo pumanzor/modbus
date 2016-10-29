@@ -1,5 +1,10 @@
 ##Modbus Protocol
 
+###Introduccion
+
+
+###Protocolo
+
 El protocolo Modbus se usa principalmente sobre dos tipos de comunicaciones:
 
 - Modbus sobre lineas seriales
