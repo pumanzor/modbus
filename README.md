@@ -59,9 +59,9 @@ El nodo maestro emite una petición MODBUS a los nodos esclavos en dos modos:
   * Modo Broadcast, el maestro puede enviar una petición (request) a todos los esclavos del bus.
     * En este modo, los esclavos no enviaran un mensaje de respuesta al maestro, basicamente el modo broadcast se utiliza para enviar mensajes de escritura a los nodos. 
     * Todos los nodos y dispositivos del bus o red deben aceptar el mensaje de broadcastm, en este caso una funcion de escritura.
-    * La direccion utilizada para tal accion en el campo address field del mensaje que se despacha desde el Maestro hacia los esclavos en la direccion 0
+    * La direccion utilizada para tal accion en el campo address field del mensaje que se despacha desde el Maestro es la direccion 0
   
-
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/mbusmode.png)
 
 
 Campo Address Field.
