@@ -63,6 +63,16 @@ El nodo maestro emite una petición MODBUS a los nodos esclavos en dos modos:
   
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/mbusmode.png)
 
+##Reglas de direccionamiento en Modbus
+
+El espacio de direccionamiento en modbus es de 256 direcciones diferentes.
+
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/addrmodbus.png)
+
+La direccion 0 esta reservada para el broadcast y todos los esclanos deben reconocerla.
+
+el Nodo Master no tiene una direccion especifica, solo los nos esclanos deben tener una. Esta direccion debe ser unica en el bus serial Modbus. 
+
 
 Campo Address Field.
 
