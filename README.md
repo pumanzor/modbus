@@ -73,6 +73,12 @@ La direccion 0 esta reservada para el broadcast y todos los esclavos deben recon
 
 el Nodo Master no tiene una direccion especifica, solo los nodos esclavos deben poser una direccion la cual debe ser unica dentro del bus serial Modbus. 
 
+##MODBUS frame description 
+
+El protocolo de aplicacion Modbus define un PDU (protocol data unit) independiente de las capas de comunicacion subyacentes
+
+
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbuspdu.png)
 
 Campo Address Field.
 
