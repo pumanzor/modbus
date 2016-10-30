@@ -7,7 +7,7 @@
   Por lo general, el maestro es una interfaz humano-máquina (HMI) o sistema SCADA y el esclavo es un sensor, un dispositivo RTU, controlador lógico programable (PLC) o controlador de automatización programable (PAC). El contenido de estas solicitudes y respuestas, y las capas de la red a través de las cuales se envían estos mensajes, son definidas por las diferentes capas del protocolo.
   
 
-###Modbus sobre lineas seriales
+##Modbus sobre lineas seriales
 
 Modbus sobre lineas seriales opera en el nivel 2 del modelo OSI, un sistema del tipo maestro-esclavo posee 1 nodo Maestro el cual envia comandos a uno de los nodos "Esclavos", a su vez estos nodos esclavos no transmitiran datos sin que antes haya un request desde el nodo Maestro y tampoco pueden comunicarse con los otros nodos esclavos de la red.
 
