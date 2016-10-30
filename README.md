@@ -34,6 +34,10 @@ La siguiente imagen muestra una representacion general del stack Modbus sobre li
 
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/mbus1.png)
 
+> El protocolo de mensajería de capa de aplicación Modbus (MODBUS application layer messaging protocol) que se encuentra posicionado en el nivel 7 del modelo OSI, proporciona una comunicación cliente / servidor entre los dispositivos conectados en los buses o redes. 
+
+> Modbus sobre líneas seriales el rol de cliente es proporcionada por el maestro y los nodos esclavos actúan como servidores.
+
 ###Principio de funcionamiento
 
 El principio Maestro/Esclavo tiene las siguientes caracteristicas:
