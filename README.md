@@ -26,9 +26,7 @@ El protocolo Modbus se usa principalmente sobre dos tipos de comunicaciones:
 
 ##Modbus sobre lineas seriales
 
-Modbus sobre lineas seriales opera en el nivel 2 del modelo OSI, un sistema del tipo maestro-esclavo posee 1 nodo Maestro el cual envia comandos a uno de los nodos "Esclavos", a su vez estos nodos esclavos no transmitiran datos sin que antes haya un request desde el nodo Maestro y tampoco pueden comunicarse con los otros nodos esclavos de la red.
-
-A nivel fisico, Modbus sobre lineas seriales puede ser implementado en diferentes interfaces tales como TIA/EIA RS485, RS232, RS422. Interfaces de 2 lineas son las mas utilizadas para este protocolo.
+Modbus sobre lineas seriales opera en el nivel 2 del modelo OSI. A nivel fisico puede ser implementado en diferentes interfaces tales como TIA/EIA RS485, RS232, RS422. Interfaces de 2 lineas son las mas utilizadas para este protocolo.
 
 ###Principio de funcionamiento
 
