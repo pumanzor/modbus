@@ -69,9 +69,9 @@ El espacio de direccionamiento en modbus es de 256 direcciones diferentes.
 
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/addrmodbus.png)
 
-La direccion 0 esta reservada para el broadcast y todos los esclanos deben reconocerla.
+La direccion 0 esta reservada para el broadcast y todos los esclavos deben reconocerla.
 
-el Nodo Master no tiene una direccion especifica, solo los nos esclanos deben tener una. Esta direccion debe ser unica en el bus serial Modbus. 
+el Nodo Master no tiene una direccion especifica, solo los nodos esclavos deben poser una direccion la cual debe ser unica dentro del bus serial Modbus. 
 
 
 Campo Address Field.
