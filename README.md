@@ -80,9 +80,7 @@ El protocolo de aplicacion Modbus define un PDU (protocol data unit) independien
 
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/amodbuspdu.png)
 
-El mapeo del protocolo MODBUS en un bus o red específica introduce algunos campos adicionales en el PDU.
-
-El cliente que inicia una transacción MODBUS MODBUS construye la PDU y a continuación añade campos con el fin de construir una PDU de comunicación apropiada.
+El mapeo del protocolo en un bus o red específica introduce algunos campos adicionales en el PDU. Por Ejemplo como se muestra en la siguiente imagen un cliente que inicia una transacción MODBUS construye la PDU y a continuación añade campos con el fin de fabricar una PDU de comunicación apropiada.
 
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbuspdu.png)
 
