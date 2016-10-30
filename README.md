@@ -13,7 +13,16 @@ Modbus sobre lineas seriales opera en el nivel 2 del modelo OSI, un sistema del 
 
 A nivel fisico, Modbus sobre lineas seriales y puede usar diferentes interfaces tales como TIA/EIA RS485, RS232, RS422, interfaces de 2 lineas son las mas utilizadas para este protocolo.
 
+###Principio de funcionamiento
 
+The master / slave principle has the following characteristics:
+- Solo 1 master puede ser conectado en la red
+- Uno o mas slaves pueden ser conectados al mismo tiempo en la red.
+- Solo y unicamente el master puede iniciar la comunicacion, ejemplo envio de requests a los slaves
+- En una comunicacion modbus, el maestro sólo puede iniciar una transacción de forma simultánea.
+- El Esclavo solo puede responder requests que provienen desde el maestro.
+- A los esclavos no se les permite iniciar la comunicación con el maestro o con cualquier otro esclavo.
+- En una comunicacion Modbus los esclavos generan un mensaje de error y lo envían como respuesta al maestro si se ha producido un error en la recepción de un mensaje o si el esclavo no puede realizar la acción solicitada.
 
 
 ###Protocolo
