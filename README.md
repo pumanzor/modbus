@@ -50,6 +50,17 @@ El principio Maestro/Esclavo tiene las siguientes caracteristicas:
 - A los esclavos no se les permite iniciar la comunicación con el maestro o con cualquier otro esclavo.
 - En una comunicacion Modbus los esclavos generan un mensaje de error y lo envían como respuesta al maestro si se ha producido un error en la recepción de un mensaje o si el esclavo no puede realizar la acción solicitada.
 
+El nodo maestro emite una petición MODBUS a los nodos esclavos en dos modos:
+
+  * Modo unicast, el maestro se dirige a un esclavo individualmente. Después de recibir y procesar la petición, el esclavo devuelve un mensaje (una "respuesta") hacia el maestro.
+    * En este modo, una transacción MODBUS consta de 2 mensajes: un request desde el maestro y una respuesta desde el esclavo.
+    * Cada nodo esclavo debe tener un direccion unica (desde 1 a 247).
+  
+  * Modo Broadcast, el maestro puede enviar una petición (request) a todos los esclavos del bus.
+    * En este modo, los esclavos no enviaran un mensaje de respuesta al maestro, basicamente el modo broadcast se utiliza para enviar mensajes de escritura a los nodos. 
+    * Todos los nodos y dispositivos del bus o red deben aceptar el mensaje de broadcastm, en este caso una funcion de escritura.
+    * La direccion utilizada para tal accion en el campo address field del mensaje que se despacha desde el Maestro hacia los esclavos en la direccion 0
+  
 
 
 
