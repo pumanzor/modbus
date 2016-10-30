@@ -30,6 +30,10 @@ En la especificación del protocolo están definidos dos modos de transmisión: 
 
 Modbus sobre lineas seriales opera en el nivel 2 del modelo OSI. A nivel fisico puede ser implementado en diferentes interfaces tales como TIA/EIA RS485, RS232, RS422. Interfaces de 2 lineas son las mas utilizadas para este protocolo.
 
+La siguiente imagen muestra una representacion general del stack Modbus sobre lineas seriales comparado con el modelo OSI.
+
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/mbus1.png)
+
 ###Principio de funcionamiento
 
 El principio Maestro/Esclavo tiene las siguientes caracteristicas:
