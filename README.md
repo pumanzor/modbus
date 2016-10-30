@@ -24,6 +24,8 @@ El protocolo Modbus se usa principalmente sobre dos tipos de comunicaciones:
 - Modbus sobre lineas seriales
 - Modbus sobre TCP/IP
 
+En la especificación del protocolo están definidos dos modos de transmisión: ASCII y RTU. Los modos definen la forma como son transmitidos los bytes del mensaje. No es posible utilizar los dos modos de transmisión en la misma red.
+
 ##Modbus sobre lineas seriales
 
 Modbus sobre lineas seriales opera en el nivel 2 del modelo OSI. A nivel fisico puede ser implementado en diferentes interfaces tales como TIA/EIA RS485, RS232, RS422. Interfaces de 2 lineas son las mas utilizadas para este protocolo.
