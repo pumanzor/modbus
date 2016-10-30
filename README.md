@@ -5,7 +5,24 @@
   Modbus es un protocolo de solicitud-respuesta implementado usando una relación maestro-esclavo. En una relación maestro-esclavo, la comunicación siempre se produce en pares, un dispositivo debe iniciar una solicitud y luego esperar una respuesta y el dispositivo de inicio (el maestro) es responsable de iniciar cada interacción. 
   
   Por lo general, el maestro es una interfaz humano-máquina (HMI) o sistema SCADA y el esclavo es un sensor, un dispositivo RTU, controlador lógico programable (PLC) o controlador de automatización programable (PAC). El contenido de estas solicitudes y respuestas, y las capas de la red a través de las cuales se envían estos mensajes, son definidas por las diferentes capas del protocolo.
-  
+
+##Abreviaciones
+
+- ADU Application Data Unit
+- HDLC High level Data Link Control
+- HMI Human Machine Interface
+- MAC Media Access Control
+- MB MODBUS Protocol
+- MBAP MODBUS Application Protocol
+- PDU Protocol Data Unit
+- PLC Programmable Logic Controller
+
+###Protocolo
+
+El protocolo Modbus se usa principalmente sobre dos tipos de comunicaciones:
+
+- Modbus sobre lineas seriales
+- Modbus sobre TCP/IP
 
 ##Modbus sobre lineas seriales
 
@@ -26,12 +43,7 @@ El principio Maestro/Esclavo tiene las siguientes caracteristicas:
 - En una comunicacion Modbus los esclavos generan un mensaje de error y lo envían como respuesta al maestro si se ha producido un error en la recepción de un mensaje o si el esclavo no puede realizar la acción solicitada.
 
 
-###Protocolo
 
-El protocolo Modbus se usa principalmente sobre dos tipos de comunicaciones:
-
-- Modbus sobre lineas seriales
-- Modbus sobre TCP/IP
 
 Campo Address Field.
 
