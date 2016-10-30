@@ -9,13 +9,19 @@
 ##Abreviaciones
 
 - ADU Application Data Unit
-- HDLC High level Data Link Control
+- PDU Protocol Data Unit
+- MBAP MODBUS Application Protocol
 - HMI Human Machine Interface
 - MAC Media Access Control
 - MB MODBUS Protocol
-- MBAP MODBUS Application Protocol
-- PDU Protocol Data Unit
 - PLC Programmable Logic Controller
+
+
+##Capas del Protocolo Modbus
+
+  En la implementación inicial, Modbus era un solo protocolo construido en base a lineas seriales, por lo que no podía ser dividida en múltiples capas. Con el tiempo, diferentes unidades de datos de aplicación fueron introducidas ya sea para cambiar el formato del paquete utilizado a través de las lineas seriales o para permitir el uso de redes TCP/IP y UDP. 
+
+  Esto llevó a una separación del protocolo principal, el cual define la unidad de datos de protocolo (PDU) y la capa de red que define la unidad de datos de aplicación (ADU).
 
 ###Protocolo
 
@@ -36,7 +42,7 @@ La siguiente imagen muestra una representacion general del stack Modbus sobre li
 
 > El protocolo de mensajería de capa de aplicación Modbus (MODBUS application layer messaging protocol) que se encuentra posicionado en el nivel 7 del modelo OSI, proporciona una comunicación cliente / servidor entre los dispositivos conectados en los buses o redes. 
 
-> Modbus sobre líneas seriales el rol de cliente es proporcionada por el maestro y los nodos esclavos actúan como servidores.
+> En Modbus sobre líneas seriales el rol de cliente es proporcionada por el maestro y los nodos esclavos actúan como servidores.
 
 ###Principio de funcionamiento
 
@@ -74,6 +80,7 @@ La direccion 0 esta reservada para el broadcast y todos los esclavos deben recon
 el Nodo Master no tiene una direccion especifica, solo los nodos esclavos deben poser una direccion la cual debe ser unica dentro del bus serial Modbus. 
 
 ##MODBUS frame description 
+
 
 El protocolo de aplicacion Modbus define un PDU (protocol data unit) independiente de las capas de comunicacion subyacentes
 
