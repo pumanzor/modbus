@@ -93,6 +93,47 @@ El campo function code del frame MODBUS es codificado en 1 byte. Los codigos val
 
 Cuando un mensaje es enviado desde un cliente a un servidor el campo function code le dice al servidor que tipo de accion debe realizar. El function code "0" no es valido.
 
+### Códigos de Función Estándares
+
+  La definición de cada código de función estándar está en la especificación. Incluso para los códigos de función más comunes, existen discrepancias inevitables entre las funciones habilitadas en el maestro y lo que el esclavo puede manejar. Para solucionar esto, las versiones anteriores de la especificación Modbus TCP definen tres clases de conformidad. La Especificación de Pruebas de Compatibilidad Modbus oficial no hace referencia a estas clases y en su lugar define la compatibilidad en cada función; sin embargo, puede ser conveniente para comprenderlo. Se recomienda que cualquier documento siga la especificación de pruebas y determine su compatibilidad con los códigos que soportan, en lugar de con las clasificaciones de legado.
+
+#### Códigos Clase 0
+
+  Los códigos Clase 0 generalmente son considerados el mínimo para un dispositivo Modbus útil, ya que dan a un maestro la habilidad de leer o escribir en el modelo de datos.
+  
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/cod0.png)
+
+#### Códigos Clase 1
+
+  Los códigos de función Clase 1 consisten en los otros códigos necesarios para tener acceso a todos los tipos del modelo de datos. En la definición original, esta lista incluye el código de función 7 (leer excepción). Sin embargo, este código es definido por la especificación actual como un código para serial únicamente.
+  
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/cod1.png)
+
+
+#### Códigos Clase 2
+
+  Los códigos de función Clase 2 son funciones más especializadas que son implementadas con menos frecuencia. Por ejemplo, Leer/Escribir Múltiples Registros puede ayudar a reducir el número total de ciclos de solicitud-respuesta, pero el comportamiento aún puede ser implementado con códigos Clase 0.
+  
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/cod2.png)
+
+#### Interfaz Modbus Encapsulada
+
+  El código de Interfaz Modbus Encapsulada (MEI), función 43, es usado para encapsular otros datos en un paquete Modbus. En la actualidad, dos números MEI están disponibles, 13 (CANopen) y 14 (identificación de dispositivos).
+
+  La Función 43/14 (identificación de dispositivos) es útil, ya que permite la transferencia de hasta 256 objetos únicos. Algunos de estos objetos son predefinidos y reservados, como el nombre del proveedor y el código de producto, pero las aplicaciones pueden definir otros objetos a transferir como conjuntos de datos genéricos.
+
+Este código no es implementado comúnmente.
+
+### Excepciones
+  Los esclavos utilizan excepciones para indicar un número de condiciones de error, desde una solicitud malformada hasta entradas incorrectas. Sin embargo, las excepciones también se pueden generar como una respuesta a nivel de la aplicación para una solicitud válida. Los esclavos no responden a las solicitudes emitidas con una excepción. En cambio, el esclavo ignora solicitudes incompletas o alteradas y comienza a esperar un nuevo mensaje entrante.
+
+  Las excepciones son reportadas en un formato de paquete definido. Primero, un código de función se regresa al maestro que solicita igual al código de función original, excepto con su conjunto de bits más significativo. Esto es equivalente a añadir 0x80 al valor del código de función original. En lugar de los datos normales asociados con una respuesta de función determinada, las respuestas de excepción incluyen un solo código de excepción.
+
+  Dentro del estándar, los cuatro códigos de excepción más comunes son 01, 02, 03 y 04. Estos se muestran en la siguiente tabla  con significados estándares para cada función.
+  
+  
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/codex.png)
+
 ###Data field
 
 El campo data de un mensaje enviado desde el cliente al servidor contiene informacion adicional que el servidor usa para tomar una accion definda en el campo function code. Esto puede incluir items como direcciones de registros, la cantidad de items a ser manejados y otros datos importantes.
