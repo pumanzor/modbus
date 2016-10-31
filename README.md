@@ -109,6 +109,7 @@ Por ejemplo un cliente puede leer el estado ON/OFF de un grupo de salidas o entr
 Cuando el servidor responde a un cliente, usa el campo function code para indicar una respuesta normal (error-free) o que algun tipo de error ha ocurrido (respuesta de excepción). Para una respuesta normal, el servidor simplemente se hace eco de la solicitud del código de función original.
 
 
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbusdatafield.png)
 
 
 
