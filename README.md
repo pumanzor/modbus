@@ -94,8 +94,9 @@ El mapeo del protocolo en un bus o red específica introduce algunos campos adic
 
 Campo Address Field.
 
-El campo de direccion de un frame modbus contiene 2 caracteres (ASCII) o 8 bits (RTU). En un sub-controller slave
-las direcciones validas van en el rango de 1 a 247.
+El campo de direccion de un frame modbus contiene 2 caracteres (ASCII) o 8 bits (RTU). 
+
+En un sub-controller slave las direcciones validas van en el rango de 1 a 247.
 
 Cuando un Maestro envia un mensaje hacia un esclavo, el frame que proviene desde el maestro debe incluir en el campo "Address Field" el ID del esclavo.
 
