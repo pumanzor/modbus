@@ -81,17 +81,24 @@ el Nodo Master no tiene una direccion especifica, solo los nodos esclavos deben 
 
 ##MODBUS frame description 
 
-El protocolo MODBUS define un protocolo data unit (PDU) independiente de las capas de comunicación subyacentes. El mapeo del protocolo MODBUS en redes específicos puede introducir algunos campos adicionales application data unit (ADU).
+El protocolo MODBUS define un protocolo data unit (PDU) independiente de las capas de comunicación subyacentes. 
 
+El mapeo del protocolo en red tipo bus o en redes especificas introduce algunos campos adicionales en el application data unit (ADU).
 
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbusframe.png)
+
+El ADU es construido por el cliente (Master) que inicia una transaccion MODBUS. la funcion indica al servidor(Slave) que tipo de accion debe realizar. 
+
+El campo function code del frame MODBUS es codificado en 1 byte. Los codigos validos estan en el rango desde 1 al 255 decimal. El rango 128 al 255 esta reservado para respuestas de excepcion). 
+
+Cuando un mensaje es enviado desde un cliente a un servidor el campo function code le dice al servidor que tipo de accion debe realizar. El function code "0" no es valido.
 
 
 Campo Address Field.
 
 El campo de direccion de un frame modbus contiene 2 caracteres (ASCII) o 8 bits (RTU). 
 
-En un sub-controller slave las direcciones validas van en el rango de 1 a 247.
+En un nodo esclave las direcciones validas van en el rango de 1 a 247.
 
 Cuando un Maestro envia un mensaje hacia un esclavo, el frame que proviene desde el maestro debe incluir en el campo "Address Field" el ID del esclavo.
 
