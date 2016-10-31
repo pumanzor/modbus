@@ -204,3 +204,12 @@ El header MBAP es de 7 bytes de longitud y contiene los siguiente campos:
 * Protocol Identifier - se utiliza para multiplexacion interna del sistema El protocolo MOBBUS es identificado con el valor 0.
 
 * Longitud - El campo longitud es una cuenta de bytes de los siguientes campos, incluyendo el Unit Identifier y los campos de data. 
+
+*  Unit Identifier - Este campo se utiliza para propósitos de enrutamiento intra-sistema. Se suele utilizar para comunicarse con  MODBUS+ o Modbus slave sobre lineas seriales a través de un gateway entre una red Ethernet TCP-IP y una línea serie Modbus.
+
+  Este campo se establece por el cliente Modbus en la solicitud y debe ser devuelto con el mismo valor en la respuesta del servidor.
+  
+En la siguiente imagen se puede apreciar una captura mediante wireshark en donde se muestran los campos antes descritos  
+
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/wiresharkmbap.png)
+
