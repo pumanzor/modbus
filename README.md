@@ -162,13 +162,14 @@ Consecuentemente:
 
 - TCP MODBUS ADU = 253 bytes + MBAP (7 bytes) = 260 bytes.
 
+##Modbus sobre TCP/IP
 
-Campo Address Field.
+###Arquitectura general de la comunucacion
 
-El campo de direccion de un frame modbus contiene 2 caracteres (ASCII) o 8 bits (RTU). 
+  Un sistema de comunicacion MODBUS sobre TCP/IP puede incluir diferentes tipos de dispositivos:
 
-En un nodo esclave las direcciones validas van en el rango de 1 a 247.
-
-Cuando un Maestro envia un mensaje hacia un esclavo, el frame que proviene desde el maestro debe incluir en el campo "Address Field" el ID del esclavo.
-
-Cuando el Esclavo Recibe el request, enviara la respuesta de vuelta al maestro y pone en el campo Address Field su propio ID.
+    - Dispositivos MODBUS TCP/IP cliente y servidor conectados en una red TCP/IP.
+    - Dispositivos de interconexión como bridges, routers o gateways para interconexión entre una red TCP / IP y una línea serial o sub-red, que permite conexiones de clientes Modbus en líneas de seriales.
+    
+    
+    - The Interconnection devices like bridge, router or gateway for interconnection between the TCP/IP network and a serial line sub-network which permit connections of MODBUS Serial line Client and Server end devices.
