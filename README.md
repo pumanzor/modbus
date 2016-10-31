@@ -190,3 +190,17 @@ Este header provee algunas diferencias comparadas con el ADU de MODBUS RTU usado
   Todas las solicitudes y las respuestas estan diseñadas de tal manera que el destinatario pueda verificar que un mensaje ha finalizado. Para codigos de funcion en que el PDU Modbus tiene una longitud fija, el codigo de funcion por si sola es suficiente
   
   Para códigos de función que llevan una cantidad variable de datos en la solicitud o respuesta, el campo de datos incluye una cuenta de bytes.
+  
+  Cuando MODBUS opera sobre TCP, la información de longitud adicional se realiza en la cabecera MBAP para que el destinatario reconozca límites de mensaje incluso si el mensaje se ha dividido en varios paquetes para la transmisión. 
+  
+  La existencia de normas de longitud explícitos e implícitos y el uso de un código de comprobación de errores CRC-32 (en Ethernet) se traduce en una probabilidad infinitesimal de la corrupción no detectada a un mensaje de petición o respuesta.
+  
+###MBAP Header description
+
+El header MBAP es de 7 bytes de longitud y contiene los siguiente campos:
+
+* Transaction Identifier - se utiliza para el emparejamiento de transacciones, el server MODBUS copia en la respuesta el identificador de transaccion en el requerimiento
+
+* Protocol Identifier - se utiliza para multiplexacion interna del sistema El protocolo MOBBUS es identificado con el valor 0.
+
+* Longitud - El campo longitud es una cuenta de bytes de los siguientes campos, incluyendo el Unit Identifier y los campos de data. 
