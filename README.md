@@ -186,6 +186,7 @@ Este header provee algunas diferencias comparadas con el ADU de MODBUS RTU usado
   Por ejemplo el campo "slave adress" en Modbus RTU sobre lineas seriales es reemplazado por un solo byte denominado "Unit Identifier" dentro del header MBAP. 
 
   Este campo se utiliza para comunicarse a traves de dispositivos tales como router, bridges o gateways que utilizan una única dirección IP para soportar múltiples unidades finales MODBUS independientes.
+
+  Todas las solicitudes y las respuestas estan diseñadas de tal manera que el destinatario pueda verificar que un mensaje ha finalizado. Para codigos de funcion en que el PDU Modbus tiene una longitud fija, el codigo de funcion por si sola es suficiente
   
-
-
+  Para códigos de función que llevan una cantidad variable de datos en la solicitud o respuesta, el campo de datos incluye una cuenta de bytes.
