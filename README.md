@@ -171,4 +171,4 @@ Consecuentemente:
     - Dispositivos MODBUS TCP/IP cliente y servidor conectados en una red TCP/IP.
     - Dispositivos de interconexión como bridges, routers o gateways para interconexión entre una red TCP / IP y una línea serial o sub-red, que permite conexiones de clientes Modbus en líneas de seriales.
     
-    ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbustcpip1.png)
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbustcpip1.png)
