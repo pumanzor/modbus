@@ -111,6 +111,15 @@ Cuando el servidor responde a un cliente, usa el campo function code para indica
 
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbusdatafield.png)
 
+El tamaño de la PDU en Modbus está limitado por la restricción de tamaño heredado de la primera aplicación Modbus en redes de línea serial (máx. RS485 ADU = 256 bytes).
+
+Por lo tanto:
+- MODBUS PDU para comunicaciones seriales = 256 - Direccion Server (1 byte) - CRC (2 bytes) = 253 bytes.
+
+Consecuentemente:
+- RS232 / RS485 ADU = 253 bytes + Direccion Server (1 byte) + CRC (2 bytes) = 256 bytes.
+
+- TCP MODBUS ADU = 253 bytes + MBAP (7 bytes) = 260 bytes.
 
 
 Campo Address Field.
