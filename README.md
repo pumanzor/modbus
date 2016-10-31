@@ -93,6 +93,21 @@ El campo function code del frame MODBUS es codificado en 1 byte. Los codigos val
 
 Cuando un mensaje es enviado desde un cliente a un servidor el campo function code le dice al servidor que tipo de accion debe realizar. El function code "0" no es valido.
 
+El campo data field de un mensaje enviado desde el cliente al servidor contiene informacion adicional que el servidor usa para tomar una accion definda en el campo function code. Esto puede incluir items como direcciones de registros, la cantidad de items a ser manejados y otros datos importantes.
+
+El campo data field puede puede ser inexistente (de longitud cero) en ciertos tipos de solicitudes, en este caso el servidor no requiere ninguna informacion adicional.
+
+Si no ocurren errores relacionados con la funcion MODBUS requerida en un ADU modbus correctamente recibida el campo data field de una respuesta desde el servidor a un cliente contiene los datos solicitados.
+
+Si ocurre un error relacionado con la función MODBUS solicitada, el campo contiene un código de excepción que la aplicación de servidor puede utilizar para determinar la siguiente acción a tomar.
+
+Por ejemplo un cliente puede leer el estado ON/OFF de un grupo de salidas o entradas discretas o puede leer/escribir el contenido de un grupo de registros. 
+
+Cuando el servidor responde a un cliente, usa el campo function code para indicar una respuesta normal (error-free) o que algun tipo de error ha ocurrido (respuesta de excepción). Para una respuesta normal, el servidor simplemente se hace eco de la solicitud del código de función original.
+
+
+
+
 
 Campo Address Field.
 
