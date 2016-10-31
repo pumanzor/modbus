@@ -179,3 +179,9 @@ Consecuentemente:
  
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbustcpip2.png)
 
+Como se puede apreciar en la imagen un header dedicado es usado en TCP/IP para identificar la unidad de datos de aplicacion y esto se llama MBAP Header (MODBUS Application Protocol header).
+
+Este header provee algunas diferencias comparadas con el ADU de MODBUS RTU usado en lineas seriales
+
+Por ejemplo el campo "slave adress" en Modbus RTU sobre lineas serial es reemplazado un solo byte denominado "Unit Identifier" dentro del header MBAP. Este campo se utilizado como comunicarse a traves de dispositivos tales como router, bridges o gateways que utilizan una única dirección IP para soportar múltiples unidades finales MODBUS independientes.
+
