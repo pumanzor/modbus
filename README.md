@@ -172,3 +172,10 @@ Consecuentemente:
   - Dispositivos de interconexión como bridges, routers o gateways para interconexión entre una red TCP / IP y una sub-red de línea serial, que permite conexiones de clientes Modbus en líneas de seriales.
     
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbustcpip1.png)
+
+####MODBUS sobre TCP/IP Application Data Unit
+
+ A continuacion se describe la encapsulacion de un request o response MODBU cuando es transportado sobre un red TCP/IP.
+ 
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbustcpip2.png)
+
