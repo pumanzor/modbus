@@ -81,13 +81,8 @@ el Nodo Master no tiene una direccion especifica, solo los nodos esclavos deben 
 
 ##MODBUS frame description 
 
+El protocolo MODBUS define un protocolo data unit (PDU) independiente de las capas de comunicación subyacentes. El mapeo del protocolo MODBUS en redes específicos puede introducir algunos campos adicionales application data unit (ADU).
 
-El protocolo de aplicacion Modbus define un PDU (protocol data unit) independiente de las capas de comunicacion subyacentes
-
-
-![alt tag](https://github.com/pumanzor/modbus/blob/master/img/amodbuspdu.png)
-
-El mapeo del protocolo en un bus o red específica introduce algunos campos adicionales en el PDU. Por Ejemplo como se muestra en la siguiente imagen un cliente que inicia una transacción MODBUS construye la PDU y a continuación añade campos con el fin de fabricar una PDU de comunicación apropiada.
 
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbuspdu.png)
 
