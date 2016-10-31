@@ -195,21 +195,26 @@ Este header provee algunas diferencias comparadas con el ADU de MODBUS RTU usado
   
   La existencia de normas de longitud explícitos e implícitos y el uso de un código de comprobación de errores CRC-32 (en Ethernet) se traduce en una probabilidad infinitesimal de la corrupción no detectada a un mensaje de petición o respuesta.
   
+###Diferencia entre Modbus TCP/IP y MOdbus RTU
+
+![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbustcpvsrtu.png)
+  
 ###MBAP Header description
 
 El header MBAP es de 7 bytes de longitud y contiene los siguiente campos:
 
-* Transaction Identifier - se utiliza para el emparejamiento de transacciones, el server MODBUS copia en la respuesta el identificador de transaccion en el requerimiento
+* Transaction Identifier (2 bytes) - se utiliza para el emparejamiento de transacciones, el server MODBUS copia en la respuesta el identificador de transaccion en el requerimiento
 
-* Protocol Identifier - se utiliza para multiplexacion interna del sistema El protocolo MOBBUS es identificado con el valor 0.
+* Protocol Identifier (2 bytes) - se utiliza para multiplexacion interna del sistema El protocolo MOBBUS es identificado con el valor 0.
 
-* Longitud - El campo longitud es una cuenta de bytes de los siguientes campos, incluyendo el Unit Identifier y los campos de data. 
+* Longitud (2 bytes) - El campo longitud es una cuenta de bytes de los siguientes campos, incluyendo el Unit Identifier y los campos de data. 
 
-*  Unit Identifier - Este campo se utiliza para propósitos de enrutamiento intra-sistema. Se suele utilizar para comunicarse con  MODBUS+ o Modbus slave sobre lineas seriales a través de un gateway entre una red Ethernet TCP-IP y una línea serie Modbus.
+*  Unit Identifier (1 byte) - Este campo se utiliza para propósitos de enrutamiento intra-sistema. Se suele utilizar para comunicarse con  MODBUS+ o Modbus slave sobre lineas seriales a través de un gateway entre una red Ethernet TCP-IP y una línea serie Modbus.
 
   Este campo se establece por el cliente Modbus en la solicitud y debe ser devuelto con el mismo valor en la respuesta del servidor.
   
 En la siguiente imagen se puede apreciar una captura mediante wireshark en donde se muestran los campos antes descritos  
 
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/wiresharkmbap.png)
+
 
