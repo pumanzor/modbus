@@ -195,7 +195,7 @@ Este header provee algunas diferencias comparadas con el ADU de MODBUS RTU usado
   
   La existencia de normas de longitud explícitos e implícitos y el uso de un código de comprobación de errores CRC-32 (en Ethernet) se traduce en una probabilidad infinitesimal de la corrupción no detectada a un mensaje de petición o respuesta.
   
-###Diferencia entre Modbus TCP/IP y MOdbus RTU
+###Diferencia entre el paquete Modbus TCP/IP y Modbus RTU
 
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbustcpvsrtu.png)
   
