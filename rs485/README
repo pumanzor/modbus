@@ -1,7 +1,7 @@
 Hello, this folder contains libraries and sketch to handle a Rs485 Modbus link to send data from master to slave
 in this case the master take readings from potentiometer (values between 0 and 255) and send it this values to slave
 
-the slave take this values and make a flashing with a delay between flashes according a values from master.
+the slave take this values and makes a flashing with a delay between flashes according a values from master.
 
 also you can see the  values that it send  from master with a LCD RGB display
 
