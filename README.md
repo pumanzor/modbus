@@ -1,12 +1,12 @@
-##Modbus Protocol
+## Modbus Protocol
 
-###Introduccion
+### Introduccion
 
   Modbus es un protocolo de solicitud-respuesta utilizandoo una relación maestro-esclavo. En una relación maestro-esclavo, la comunicación siempre se produce en pares, un dispositivo debe iniciar una solicitud y luego esperar una respuesta y el dispositivo de inicio (el maestro) es responsable de iniciar cada interacción. 
   
   Por lo general, el maestro es una interfaz humano-máquina (HMI) o sistema SCADA y el esclavo es un sensor, un dispositivo RTU, controlador lógico programable (PLC) o controlador de automatización programable (PAC). El contenido de estas solicitudes y respuestas, y las capas de la red a través de las cuales se envían estos mensajes, son definidas por las diferentes capas del protocolo.
 
-##Abreviaciones
+#### Abreviaciones
 
 - ADU Application Data Unit
 - PDU Protocol Data Unit
@@ -17,13 +17,13 @@
 - PLC Programmable Logic Controller
 
 
-##Capas del Protocolo Modbus
+### Capas del Protocolo Modbus
 
   En la implementación inicial, Modbus era un solo protocolo construido en base a lineas seriales, por lo que no podía ser dividida en múltiples capas. Con el tiempo, diferentes unidades de datos de aplicación fueron introducidas ya sea para cambiar el formato del paquete utilizado a través de las lineas seriales o para permitir el uso de redes TCP/IP y UDP. 
 
   Esto llevó a una separación del protocolo principal, el cual define la unidad de datos de protocolo (PDU) y la capa de red que define la unidad de datos de aplicación (ADU).
 
-###Protocolo
+### Protocolo
 
 El protocolo Modbus se usa principalmente sobre dos tipos de comunicaciones:
 
@@ -32,7 +32,7 @@ El protocolo Modbus se usa principalmente sobre dos tipos de comunicaciones:
 
 En la especificación del protocolo están definidos dos modos de transmisión: ASCII y RTU. Los modos definen la forma como son transmitidos los bytes del mensaje. No es posible utilizar los dos modos de transmisión en la misma red.
 
-##Modbus sobre lineas seriales
+### Modbus sobre lineas seriales
 
 Modbus sobre lineas seriales opera en el nivel 2 del modelo OSI. A nivel fisico puede ser implementado en diferentes interfaces tales como TIA/EIA RS485, RS232, RS422. Interfaces de 2 lineas son las mas utilizadas para este protocolo.
 
@@ -44,7 +44,7 @@ La siguiente imagen muestra una representacion general del stack Modbus sobre li
 
 > En Modbus sobre líneas seriales el rol de cliente es proporcionada por el maestro y los nodos esclavos actúan como servidores.
 
-###Principio de funcionamiento
+### Principio de funcionamiento
 
 El principio Maestro/Esclavo tiene las siguientes caracteristicas:
 
@@ -69,7 +69,7 @@ El nodo maestro emite una petición MODBUS a los nodos esclavos en dos modos:
   
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/mbusmode.png)
 
-##Reglas de direccionamiento en Modbus
+### Reglas de direccionamiento en Modbus
 
 El espacio de direccionamiento en modbus es de 256 direcciones diferentes.
 
@@ -79,7 +79,7 @@ La direccion 0 esta reservada para el broadcast y todos los esclavos deben recon
 
 el Nodo Master no tiene una direccion especifica, solo los nodos esclavos deben poser una direccion la cual debe ser unica dentro del bus serial Modbus. 
 
-##MODBUS frame description 
+### MODBUS frame description 
 
 El protocolo MODBUS define un protocolo data unit (PDU) independiente de las capas de comunicación subyacentes. 
 
@@ -134,7 +134,7 @@ Este código no es implementado comúnmente.
   
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/codex.png)
 
-###Data field
+#### Data field
 
 El campo data de un mensaje enviado desde el cliente al servidor contiene informacion adicional que el servidor usa para tomar una accion definda en el campo function code. Esto puede incluir items como direcciones de registros, la cantidad de items a ser manejados y otros datos importantes.
 
@@ -173,7 +173,7 @@ Consecuentemente:
     
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbustcpip1.png)
 
-####MODBUS sobre TCP/IP Application Data Unit
+#### MODBUS sobre TCP/IP Application Data Unit
 
  A continuacion se describe la encapsulacion de un request o response MODBU cuando es transportado sobre un red TCP/IP.
  
@@ -195,7 +195,7 @@ Este header provee algunas diferencias comparadas con el ADU de MODBUS RTU usado
   
   La existencia de normas de longitud explícitos e implícitos y el uso de un código de comprobación de errores CRC-32 (en Ethernet) se traduce en una probabilidad infinitesimal de la corrupción no detectada a un mensaje de petición o respuesta.
   
-###Diferencia entre el paquete Modbus TCP/IP y Modbus RTU
+#### Diferencia entre el paquete Modbus TCP/IP y Modbus RTU
 
 ![alt tag](https://github.com/pumanzor/modbus/blob/master/img/modbustcpvsrtu.png)
   
