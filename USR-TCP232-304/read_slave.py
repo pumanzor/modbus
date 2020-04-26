@@ -23,7 +23,7 @@ client1 = ModbusClient('192.168.1.10', port=502, framer=ModbusRtuFramer)
 client1.connect()
 
 # client1.read_holding_registers(A, B , unit=C)
-#where A=register number, B=number, unit=slave id
+#where A=Address of register(s), B=register number, unit=slave id
 
 rr0 = client1.read_holding_registers(1,1 , unit=1)
 print(rr0.registers)
