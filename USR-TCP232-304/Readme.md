@@ -2,9 +2,9 @@ This is a implementation of RS485 modbus gateway using an USR-TCP232-304 devices
 
 The components are:
 
-1.- Linux Machine how modbus syncronous server i.e. Raspberry pi
+1.- Linux Machine how modbus syncronous client i.e. Raspberry pi and pymodbus (Ethernet side)
 
-2.- The Bus using UTP wire
+2.- The Bus using UTP wire (RS485 side)
 
 3.- RS485 Reles
 
