@@ -1,4 +1,4 @@
-This is a implementation of RS485 modbus gateway using an USR-TCP232-304 devices together with a pymodbus library to take remote control of RTU slave devices over rs485 bus
+This is a implementation of RS485 modbus gateway using an USR-TCP232-304 device together with a pymodbus library to take remote control of RTU slave devices over rs485 bus
 
 The components are:
 
