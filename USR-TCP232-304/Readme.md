@@ -9,3 +9,9 @@ The components are:
 3.- RS485 Reles
 
 4.- A MQTT instance to send and receive messages by an web application to take remote control
+
+To achieve this on Raspberry pi you must to install pymodbus library
+
+pip install pymodbus
+
+
