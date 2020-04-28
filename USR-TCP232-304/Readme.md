@@ -12,6 +12,9 @@ The components are:
 
 To achieve this on Raspberry pi you must to install pymodbus library
 
-''pip install pymodbus''
+#### pip install pymodbus
+
+then copy this snipet code in your Linux or raspberry machine where you installed pymodbus
+
 
 
