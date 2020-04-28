@@ -56,6 +56,10 @@ status = rr.registers[0]
 print(status)
 ```
 
+explanation of
+
+ rq = client1.write_register(1, 256, unit=3)
+
 256 means ON, 512 Off, register address channel 1= 1, channel 2 = 2, unit is the device ID in this case is 3 you must to setup 
 the dipswitch to 3, like this:
 
