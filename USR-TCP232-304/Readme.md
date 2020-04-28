@@ -60,16 +60,24 @@ explanation of
 
  rq = client1.write_register(1, 256, unit=3)
 
-256 means ON, 512 Off, register address channel 1= 1, channel 2 = 2, unit is the device ID in this case is 3 you must to setup 
-the dipswitch to 3, like this:
+First value = Register Address
+Second value : Register number
+Third value : Device ID
 
+in this case if you are using a RS485 rele (purchased by aliexpress)
+
+First Value could be 1 or 2, 1 first channel or rele - 2 second channel or rele
+Second Value could be, 256 = ON, 512 = Off
+Third Value is the slave address
+
+in this case is 3 you must to setup the dipswitch to 3, like this:
 
 ![DIP](https://raw.githubusercontent.com/pumanzor/modbus/master/USR-TCP232-304/imgs/dip.jpg)
 
 As you can see decimal 3 equals to 11 binary, then setup the dip switch 110001, last switch 6 must be set ON because is RTU mode
 
 
-then copy this snipet code in your Linux or raspberry machine where you installed pymodbus
+to read copy this snipet code in your Linux or raspberry machine where you installed pymodbus
 
 ```
 #!/usr/bin/env python
