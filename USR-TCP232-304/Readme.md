@@ -107,7 +107,7 @@ client1.connect()
 #client1.read_holding_registers(A, B , unit=C)
 #where A=Address of register(s), B=register number, unit=slave id
 
-rr0 = client1.read_holding_registers(1,1 , unit=1)
+rr0 = client1.read_holding_registers(1,1 , unit=3)
 print(rr0.registers)
 
 ```
