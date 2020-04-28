@@ -66,8 +66,10 @@ explanation of
 
 in this case if you are using a RS485 rele (purchased by aliexpress)
 
-First Value could be 1 or 2, 1 first channel or rele - 2 second channel or rele
+First value could be 1 or 2 -- 1 is the first channel or rele and 2 is the second channel or rele
+
 Second Value could be, 256 = ON, 512 = Off
+
 Third Value is the slave address
 
 in this case is 3 you must to setup the dipswitch to 3, like this:
