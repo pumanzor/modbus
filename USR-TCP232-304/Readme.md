@@ -18,6 +18,8 @@ To achieve this on Raspberry pi you must to install pymodbus library
 then use this diagram to connect your USR-TCP-232 , RS485 Rele and your Linux machine
 
 
+![DIAGR](https://raw.githubusercontent.com/pumanzor/modbus/master/USR-TCP232-304/imgs/rs485-schema.png)
+
 
 and use this code snipet to switch the channel 1 of rele to ON
 
