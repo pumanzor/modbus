@@ -48,7 +48,9 @@ import inspect
 client1 = ModbusClient('192.168.1.10', port=502, framer=ModbusRtuFramer)
 client1.connect()
 
-### 256 means ON, 512 Off, register address channel 1= 1, channel 2 = 2, unit is the device ID in this case is 3 you must to setup the dipswitch to 3, like this
+### 256 means ON, 512 Off, register address channel 1= 1, channel 2 = 2,
+unit is the device ID in this case is 3 you must to setup 
+the dipswitch to 3, like this
 
 
 
