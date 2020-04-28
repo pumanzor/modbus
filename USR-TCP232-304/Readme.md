@@ -60,6 +60,11 @@ print(status)
 the dipswitch to 3, like this:
 
 
+![DIP](https://raw.githubusercontent.com/pumanzor/modbus/master/USR-TCP232-304/imgs/dip.jpg)
+
+As you can see decimal 3 equals to 11 binary, then setup the dip switch 110001, last switch 6 must be set ON because is RTU mode
+
+
 then copy this snipet code in your Linux or raspberry machine where you installed pymodbus
 
 ```
