@@ -17,4 +17,8 @@ To achieve this on Raspberry pi you must to install pymodbus library
 then copy this snipet code in your Linux or raspberry machine where you installed pymodbus
 
 
+[read_slave.py](https://raw.githubusercontent.com/pumanzor/modbus/master/USR-TCP232-304/read_slave.py)
+
+
+
 
