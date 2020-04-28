@@ -16,7 +16,7 @@ To achieve this on Raspberry pi you must to install pymodbus library
 
 then copy this snipet code in your Linux or raspberry machine where you installed pymodbus
 
- #!/usr/bin/env python
+''' #!/usr/bin/env python
 
  from pymodbus.client.sync import ModbusTcpClient as ModbusClient
  from pymodbus.transaction import ModbusRtuFramer
