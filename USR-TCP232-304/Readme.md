@@ -60,9 +60,9 @@ explanation of
 
  rq = client1.write_register(1, 256, unit=3)
 
-First value = Register Address
-Second value : Register number
-Third value : Device ID
+* First value = Register Address
+* Second value : Register number
+* Third value : Device ID
 
 in this case if you are using a RS485 rele (purchased by aliexpress)
 
