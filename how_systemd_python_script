@@ -15,7 +15,7 @@ After=network.target
  
 [Service]
 Type=simple
-ExecStart=/usr/bin/python /srv/modbus.py
+ExecStart=/usr/bin/python /srv/modbus.py #assuming a file called modbus.py into /srv/ directory
 User=root
 Group=root
 Restart=on-failure
