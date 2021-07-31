@@ -1,0 +1,40 @@
+Create a file with this name
+
+modbus.service
+
+into this directory
+
+/etc/systemd/system
+
+with this content
+
+
+[Unit]
+Description=Modbus Script 
+After=network.target
+ 
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /srv/modbus.py
+User=root
+Group=root
+Restart=on-failure
+SyslogIdentifier=Modbus_Control
+RestartSec=5
+TimeoutStartSec=infinity
+ 
+[Install]
+WantedBy=multi-user.target
+
+
+save and exec this commands
+
+systemctl enable <service modbus
+systemctl daemon-reload
+systemctl start modbus
+
+
+you can check with this command
+
+systemctl status modbus
+
